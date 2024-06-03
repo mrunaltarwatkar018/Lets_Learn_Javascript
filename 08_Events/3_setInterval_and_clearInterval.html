@@ -1,0 +1,57 @@
+<!-- Timeout function -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> setInterval() and clearInterval()</title>
+</head>
+<body>
+    <h1>Hwy, Mrunal</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+    <script>
+        // setInterval() function
+        // setInterval(function, milliseconds)
+        // setInterval(function, milliseconds, parameter1, parameter2, ...)
+        // setInterval(function, milliseconds, parameter1, parameter2, ..., parameterN)
+        // setInterval(function, milliseconds, parameter1, parameter2, ..., parameterN, context)
+        // setInterval(function, milliseconds, parameter1, parameter2, ..., parameterN, context, this
+
+        /*
+        setInterval(function() {
+            console.log("Hello, Mrunal", Date.now());
+        }, 1000)
+        */
+
+        /*
+        const sayDate =  function() {
+            console.log("Hello, Mrunal", Date.now());
+        }
+
+        setInterval(sayDate, 1000);
+        */
+
+        const sayDate =  function(str) {
+            console.log(str, Date.now());
+        }
+
+        // setInterval(sayDate, 1000, "Hello");
+        
+        // to stop above event, we have clearInterval()
+
+        // clearInterval() function
+        // clearInterval(id)
+        // id = setInterval(function, milliseconds)
+        // id = setInterval(function, milliseconds, parameter1, parameter2, ...)
+        // id = setInterval(function, milliseconds, parameter1, parameter2, ..., parameterN)
+        // id = setInterval(function, milliseconds, parameter1, parameter2, ..., parameterN, context
+        // id = setInterval(function, milliseconds, parameter1, parameter2, ..., parameterN, context
+
+        const intervalId = setInterval(sayDate, 1000, "Hello");
+        clearInterval(intervalId);
+    </script>
+
+</html>

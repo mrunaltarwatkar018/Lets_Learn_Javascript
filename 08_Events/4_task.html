@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JavaScript Intervals Task</title>
+</head>
+
+
+<body>
+
+    <h1>Async project</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        // when we clicked on start button, the event will be start 
+        // and simillarly,  
+        // when we clicked on stp button, the event will be stop 
+
+        document.querySelector("#start").addEventListener("click", function () {
+            const start = function () {
+                console.log("Mrunal", Date.now());
+            };
+            const toStop = setInterval(start, 1000, (click = start));
+
+            document.querySelector("#stop").addEventListener("click", function () {
+                clearInterval(toStop);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

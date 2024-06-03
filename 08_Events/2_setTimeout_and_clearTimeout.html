@@ -1,0 +1,63 @@
+<!-- Timeout function -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> setTimeout() and clearTimeout()</title>
+</head>
+<body>
+    <h1>Hwy, Mrunal</h1>
+    <button id="stop">Stop</button>
+</body>
+    <script>
+
+        // setTimeout() function
+        // setTimeout(function, milliseconds)
+        // function - function to be executed after the specified number of milliseconds
+        // milliseconds - number of milliseconds to delay execution of the function
+        // returns - timeout ID (integer) used by clearTimeout() to cancel the timeout associated with the
+
+        //setTimeout(function() {
+        //    console.log("Sanket");
+        //}, 2000);
+
+
+        /*
+        const sayMrunal = function() {
+            console.log("Sanket");
+        }
+
+        setTimeout(sayMrunal, 2000);   // give only reerence
+        */
+
+
+        // to change the h1 content
+
+        const changeText = function() {
+            document.querySelector('h1').innerHTML = "Your are the Best";
+        }
+        // setTimeout(changeText, 2000);   // give only reerence
+
+        
+        
+        
+        // to stop the about event
+        // clearTimeout() function
+        // clearTimeout(timeoutID)
+        // timeoutID - timeout ID returned by setTimeout() function
+        // returns - undefined
+        
+        const changeMe = setTimeout(changeText, 2000);   // give only reerence
+        //clearTimeout(changeMe);
+        
+
+        // clearTimeout() on event
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(changeMe);
+            console.log("STOPPED");
+        })
+    </script>
+
+</html>
